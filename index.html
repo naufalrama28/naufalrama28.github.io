@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+    <title>Personal Website</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/83f4ea38db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!-- <img src="images/logo.jpg" class="logo"> -->
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1>Hi, I'm <span> Muhammad <br> Naufal Ramadhan </span> </h1>
+        </div>
+    </div>
+</div>
+
+<!-- ------------about------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a second-year undergraduate student majoring in Computer Science at Institut Pertanian Bogor. I am interested
+                    in the rapid development of technology, especially in the computer field. I have strengths in problem-solving,
+                    logical reasoning, and mastering certain subjects. I aim to be a lifelong learner and an expert generalist, which
+                    would be useful in the fast-changing world. My future plan is to have a positive impact with my major in the
+                    education field.</p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Language</span><br>Speaks English at Proficient Level</li>
+                        <li><span>Programming</span><br>Basic Knowledge in HTML, CSS, and Python</li>
+                        <li><span>Soft Skill</span><br>Problem-solving, Logical Reasoning, and Self-Learner</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022</span><br>1st Winner in Spelling Bee Competition</li>
+                        <li><span>2022</span><br>1st Runner Up in Integrated Math Competition</li>
+                        <li><span>2024</span><br>Teaching Logical Reasoning and Math Course at PIVOT Solution</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2027 (Expected)</span><br>Undergraduate in Computer Science Major at IPB University </li>
+                        <li><span>2020 - 2023</span><br>Senior High School at MAN 1 Kota Tangerang</li>
+                        <li><span>2017 - 2020</span><br>Junior High School at SMPN 15 Kota Tangerang</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------contact-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>naufal28ramadhan@apps.ipb.ac.id</p>
+                <p><i class="fa-solid fa-square-phone"></i>+6282119455997</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/naufalr_28/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Novoru28"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/muhnaufalramadhan/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="https://www.linkedin.com/posts/muhnaufalramadhan_cv-muhammad-naufal-ramadhan-activity-7093186583276769281-IeJv?utm_source=share&utm_medium=member_desktop" class="btn btn2">Open CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Naufal. Made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
